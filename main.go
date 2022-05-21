@@ -1,7 +1,11 @@
+/*
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import "fmt"
+import "github.com/TheBoringDude/waxtest-manager/cmd"
 
 func main() {
-	fmt.Println("wax testnet manager")
+	cmd.Execute()
 }
