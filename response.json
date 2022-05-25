@@ -1,0 +1,14 @@
+{
+  "msg": "succeeded",
+  "keys": {
+    "active_key": {
+      "public": "EOS5CkMR4PmS2CU1HZP3aNmBFtXPzkZM2LbnGr8eYnobZRRcpC5db",
+      "private": "5HxaXNbruY8wHyQuzEunegEB6bt82rYLJ8aphZ1kFWtjVk1JPdF"
+    },
+    "owner_key": {
+      "public": "EOS5pVaftmeEsZuRKeGuFE5kvh778evCd9fb2ccyBiFDvnT1YRgCv",
+      "private": "5J2tniexTCReNNng6vhkTNn1V23Uktfq3L4bKJbd8rmC5JRnCLM"
+    }
+  },
+  "account": "anotherwaxu1"
+}
