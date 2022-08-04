@@ -1,6 +1,10 @@
 package internal
 
-type TestnetResponse struct {
+type GetTokenResponse struct {
+	Msg string `json:"msg"`
+}
+
+type CreateAccResponse struct {
 	Msg     string `json:"msg"`
 	Keys    Keys   `json:"keys"`
 	Account string `json:"account"`

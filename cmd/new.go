@@ -12,7 +12,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var name string
+var newAccountName string
 
 // newCmd represents the new command
 var newCmd = &cobra.Command{
@@ -22,13 +22,13 @@ var newCmd = &cobra.Command{
 	
 This will send an api request to create a new testnet with the current account.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		if name == "" {
+		if newAccountName == "" {
 			return
 		}
 
-		var resp internal.TestnetResponse
+		var resp internal.CreateAccResponse
 
-		if err := requests.Get(fmt.Sprintf("https://faucet.waxsweden.org/create_account?%s", name), &resp); err != nil {
+		if err := requests.Get(fmt.Sprintf("https://faucet.waxsweden.org/create_account?%s", newAccountName), &resp); err != nil {
 			log.Fatal("\n[i] There was a problem when trying to create a new testnet account. Are you connected to the internet?")
 		}
 
@@ -49,6 +49,6 @@ This will send an api request to create a new testnet with the current account.`
 func init() {
 	rootCmd.AddCommand(newCmd)
 
-	newCmd.Flags().StringVarP(&name, "name", "n", "", "wax account name (required)")
+	newCmd.Flags().StringVarP(&newAccountName, "name", "n", "", "wax account name (required)")
 	newCmd.MarkFlagRequired("name")
 }
